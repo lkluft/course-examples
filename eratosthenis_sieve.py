@@ -5,7 +5,7 @@
 # Repeat until you have passed the square root of `N`.
 # The uncrossed numbers that remain are all the primes less than `N`.
 
-# quick notice: this is a verbatic port of a Java code to Julia,
+# quick notice: this is a verbatic port of a Java code to Python,
 # and as such it is unreasonably low level.
 import numpy as np
 
