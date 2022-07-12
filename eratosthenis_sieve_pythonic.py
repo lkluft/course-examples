@@ -7,8 +7,8 @@
 
 
 def eratosthenis_sieve(N):
-    prime = [True for i in range(N + 1)]  # boolean array
-    p = 2
+    prime = [i > 1 for i in range(N + 1)]  # (initialize 0 and 1 to False)
+    p = 0
     while p * p <= N:
         # If prime[p] is not changed, then it is a prime
         if prime[p]:
@@ -17,7 +17,7 @@ def eratosthenis_sieve(N):
                 prime[i] = False
         p += 1
 
-    return [p for p in range(2, N + 1) if prime[p]]
+    return [i for i, p in enumerate(prime) if p]
 
 
-print(eratosthenis_sieve(10))
+print(eratosthenis_sieve(50))
