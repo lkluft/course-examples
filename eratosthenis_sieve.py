@@ -44,4 +44,12 @@ def eratosthenis_sieve(N):
         return np.empty(0)  # return null array if bad imput
 
 
-print(eratosthenis_sieve(10))
+def test_primes():
+    assert 0 not in eratosthenis_sieve(10), "0 is not a prime."
+    assert 1 not in eratosthenis_sieve(10), "1 is not a prime."
+    assert len(eratosthenis_sieve(10)) == 4, "There are four primes until 10."
+    assert len(eratosthenis_sieve(100)) == 25, "There are 25 primes until 100."
+
+
+if __name__ == "__main__":
+    print(eratosthenis_sieve(10))
