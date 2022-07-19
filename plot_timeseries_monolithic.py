@@ -37,8 +37,8 @@ for y in timeseries.T:
     trends.append(trend)
 
     n = y.size
-    mse = np.sum(np.abs(trend - y[i])) / n
-    msemean = np.sum(np.abs(x - my)) / n
+    mse = np.sum(np.abs(trend - y)) / n
+    msemean = np.sum(np.abs(y - my)) / n
     nrmse = np.sqrt(mse / msemean)
     nrmses.append(nrmse)
 
