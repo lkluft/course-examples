@@ -7,17 +7,17 @@
 
 
 def eratosthenis_sieve(N):
-    prime = [i > 1 for i in range(N + 1)]  # (initialize 0 and 1 to False)
+    is_prime = [i > 1 for i in range(N + 1)]  # (initialize 0 and 1 to False)
     p = 0
     while p * p <= N:
         # If prime[p] is not changed, then it is a prime
-        if prime[p]:
+        if is_prime[p]:
             # Updating all multiples of p
             for i in range(p * p, N + 1, p):
-                prime[i] = False
+                is_prime[i] = False
         p += 1
 
-    return [i for i, p in enumerate(prime) if p]
+    return [i for i, p in enumerate(is_prime) if p]
 
 
 def test_primes():
